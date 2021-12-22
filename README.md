@@ -1,4 +1,4 @@
-# Axios IO-TS
+# Axios FP-IO-TS
 
 [![Build](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml)
 
