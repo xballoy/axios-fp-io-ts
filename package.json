@@ -10,6 +10,18 @@
   },
   "author": "Xavier Balloy",
   "license": "MIT",
+  "keywords": [
+    "typescript",
+    "functional-programming",
+    "validator",
+    "validation",
+    "schema",
+    "xhr",
+    "http",
+    "ajax",
+    "promise",
+    "node"
+  ],
   "bugs": {
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
