@@ -1,6 +1,6 @@
 # Axios FP-IO-TS
 
-[![Build](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml)
+[![Build](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml) [![npm](https://img.shields.io/npm/v/axios-fp-io-ts)](https://www.npmjs.com/package/axios-fp-io-ts)
 
 A wrapper around `axios` which uses `io-ts` to validate the received response.
 
