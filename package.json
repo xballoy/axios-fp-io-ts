@@ -67,7 +67,7 @@
   "peerDependencies": {
     "axios": "~0.24.0",
     "fp-ts": "^2.8.0",
-    "io-ts": "^2.2.16"
+    "io-ts": "^2.2.10"
   },
   "lint-staged": {
     "*.ts": "eslint --cache --fix",
