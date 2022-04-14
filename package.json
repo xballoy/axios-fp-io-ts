@@ -40,7 +40,7 @@
     "test:coverage": "npm test -- --coverage"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "8.3.1",
+    "@rollup/plugin-typescript": "8.3.2",
     "@tsconfig/node16": "1.0.2",
     "@types/jest": "27.4.1",
     "@types/node": "17.0.23",
