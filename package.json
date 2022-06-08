@@ -57,7 +57,7 @@
     "lint-staged": "13.0.0",
     "msw": "0.42.1",
     "prettier": "2.6.2",
-    "rollup": "2.75.5",
+    "rollup": "2.75.6",
     "rollup-plugin-dts": "4.2.2",
     "rollup-plugin-esbuild": "4.9.1",
     "ts-jest": "28.0.4",
