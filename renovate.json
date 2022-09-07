@@ -4,5 +4,19 @@
   "automerge": true,
   "lockFileMaintenance": {
     "enabled": true
-  }
+  },
+  "packageRules": [
+    {
+      "matchPackagePatterns": ["eslint"],
+      "groupName": "ESLint packages"
+    },
+    {
+      "matchPackagePatterns": ["jest"],
+      "groupName": "Jest packages"
+    },
+    {
+      "matchPackagePatterns": ["rollup", "esbuild"],
+      "groupName": "Rollup packages"
+    }
+  ]
 }
