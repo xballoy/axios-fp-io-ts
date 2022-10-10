@@ -42,7 +42,7 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "8.5.0",
     "@tsconfig/node16": "1.0.3",
-    "@types/jest": "29.1.1",
+    "@types/jest": "29.1.2",
     "@types/node": "18.0.0",
     "@typescript-eslint/eslint-plugin": "5.38.1",
     "@typescript-eslint/parser": "5.38.1",
