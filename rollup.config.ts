@@ -1,15 +1,12 @@
 import { defineConfig } from 'rollup';
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
-import pkg from './package.json';
+import pkg from './package.json' assert { type: 'json' };
 
 const input = 'src/index.ts';
 const externalLibs = ['axios', 'fp-ts/Either', 'fp-ts/function', 'fp-ts/TaskEither', 'io-ts/PathReporter'];
 
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
-const main = pkg.main as string;
-const types = pkg.types as string;
-/* eslint-enable */
+const { main, types } = pkg;
 
 const config = defineConfig([
   {
