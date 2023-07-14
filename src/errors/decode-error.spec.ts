@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { DecodeError, isDecodeError } from './decode-error';
 
 describe('DecodeError', () => {

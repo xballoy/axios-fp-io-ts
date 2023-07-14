@@ -1,5 +1,7 @@
+import { fail } from 'node:assert';
 import { isLeft, isRight } from 'fp-ts/Either';
 import * as t from 'io-ts';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { AxiosInstanceWrapper } from './axios-instance-wrapper';
 import { AxiosWrapper } from './axios-static-wrapper';
 import { AxiosRequestError } from './errors/axios-request-error';
@@ -90,7 +92,24 @@ describe('AxiosInstanceWrapper', () => {
         });
       });
 
-      describe('when response is not successful', () => {});
+      describe('when response is not successful', () => {
+        beforeEach(() => {
+          mockServerResponse(method, 500, 'error');
+        });
+
+        it('should return a AxiosResponseError', async () => {
+          const result = await cut.request(UserCodec)({
+            method,
+            url: ENDPOINT_MOCK,
+          })();
+
+          if (!isLeft(result)) {
+            fail('result should be left');
+          }
+
+          expect(result.left).toBeInstanceOf(AxiosResponseError);
+        });
+      });
     });
   });
 
