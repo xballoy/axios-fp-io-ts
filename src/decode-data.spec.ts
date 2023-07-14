@@ -10,7 +10,7 @@ describe('decodeData', () => {
       userId: t.string,
       name: t.string,
     },
-    'User'
+    'User',
   );
   let axiosResponse: AxiosResponse;
 

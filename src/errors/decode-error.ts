@@ -1,5 +1,8 @@
 export class DecodeError extends Error {
-  constructor(codecName: string, public errors?: string[]) {
+  constructor(
+    codecName: string,
+    public errors?: string[],
+  ) {
     super(`Unable to decode ${codecName}`);
     this.errors = errors ?? [];
   }
