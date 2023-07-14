@@ -1,5 +1,8 @@
 export class AxiosRequestError extends Error {
-  constructor(message: string, public readonly request: unknown) {
+  constructor(
+    message: string,
+    public readonly request: unknown,
+  ) {
     super(message);
   }
 }

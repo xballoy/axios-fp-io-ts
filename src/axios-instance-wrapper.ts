@@ -12,15 +12,15 @@ export type AxiosWrapperError = AxiosResponseError | AxiosRequestError | Error |
 
 const executeRequestAndValidateData = <T = any, D = any>(
   codec: Type<T>,
-  fn: () => Promise<AxiosResponse<T, D>>
+  fn: () => Promise<AxiosResponse<T, D>>,
 ): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
   pipe(
     tryCatch(fn, (reason) => handleError(reason)),
     chain((response) => pipe(response, decodeData(codec), fromEither)),
     fold(
       (error) => left(error),
-      (response) => right(response)
-    )
+      (response) => right(response),
+    ),
   );
 
 export class AxiosInstanceWrapper {

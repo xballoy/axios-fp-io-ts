@@ -5,7 +5,7 @@ export class AxiosResponseError extends Error {
     message: string,
     public readonly data: unknown,
     public readonly status: number,
-    public readonly headers: AxiosResponseHeaders
+    public readonly headers: AxiosResponseHeaders,
   ) {
     super(message);
   }

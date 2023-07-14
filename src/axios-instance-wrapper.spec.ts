@@ -14,7 +14,7 @@ describe('AxiosInstanceWrapper', () => {
       userId: t.string,
       name: t.string,
     },
-    'User'
+    'User',
   );
   const VALID_DATA = {
     userId: 'userId',
