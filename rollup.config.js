@@ -8,7 +8,7 @@ const externalLibs = ['axios', 'fp-ts/Either', 'fp-ts/function', 'fp-ts/TaskEith
 
 const { main, types } = pkg;
 
-const config = defineConfig([
+export default defineConfig([
   {
     input,
     output: {
@@ -27,5 +27,3 @@ const config = defineConfig([
     plugins: [dts()],
   },
 ]);
-
-export default config;

@@ -1,9 +1,7 @@
 {
-  "extends": "@tsconfig/node16/tsconfig.json",
+  "extends": "@tsconfig/node18/tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
-    "moduleResolution": "node",
-    "resolveJsonModule": true
+    "outDir": "lib"
   },
-  "include": ["src/**/*.ts", "rollup.config.ts"]
+  "include": ["src/**/*.ts"]
 }

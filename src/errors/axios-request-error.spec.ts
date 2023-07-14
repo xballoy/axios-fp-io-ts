@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { AxiosRequestError, isAxiosRequestError } from './axios-request-error';
 
 describe('AxiosRequestError', () => {

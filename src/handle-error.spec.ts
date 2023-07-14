@@ -1,4 +1,5 @@
 import { AxiosResponse } from 'axios';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
 import { handleError } from './handle-error';

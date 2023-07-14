@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import { AxiosInstanceWrapper } from './axios-instance-wrapper';
 import { AxiosWrapper } from './axios-static-wrapper';
 

@@ -1,6 +1,8 @@
+import { fail } from 'node:assert';
 import { AxiosResponse } from 'axios';
 import { isLeft, isRight } from 'fp-ts/Either';
 import * as t from 'io-ts';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { decodeData } from './decode-data';
 import { DecodeError } from './errors/decode-error';
 
