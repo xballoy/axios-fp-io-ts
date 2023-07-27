@@ -1,6 +1,6 @@
 {
   "name": "axios-fp-io-ts",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A wrapper around axios which uses io-ts to validate the received response.",
   "type": "module",
   "source": "src/index.ts",
