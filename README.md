@@ -22,7 +22,8 @@ npm info "axios-fp-io-ts@latest" peerDependencies
 
 ```typescript
 import { AxiosResponse } from 'axios';
-import axiosWrapper, {
+import {
+  AxiosWrapper,
   AxiosWrapperError,
   isAxiosRequestError,
   isAxiosResponseError,
@@ -37,12 +38,12 @@ const getUsers = async () => {
       userId: t.string,
       name: t.string,
     }),
-    'Users'
+    'Users',
   );
   type Users = t.TypeOf<typeof UsersCodec>;
 
-  const eitherResponse: Either<AxiosWrapperError, AxiosResponse> = await axiosWrapper.get(UsersCodec)(
-    'https://localhost/users'
+  const eitherResponse: Either<AxiosWrapperError, AxiosResponse> = await AxiosWrapper.get(UsersCodec)(
+    'https://localhost/users',
   )();
 
   if (isRight(eitherResponse)) {
