@@ -11,6 +11,23 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+## [v2.0.0] (July 20, 2023)
+
+### Breaking Change
+
+- Remove the default export
+
+```diff
+- import axiosWrapper from 'axios-fp-io-ts';
+- import { AxiosWrapper } from 'axios-fp-io-ts';
+```
+
+- Add a CommonJS, and a UMD output
+
+### Internal and Tests
+
+- Update all devDependencies
+
 ### Documentation
 
 - Improve visibility on npmjs registry
@@ -21,3 +38,4 @@ All notable changes to this project will be documented in this file.
 Initial version
 
 [v1.0.0]: https://github.com/xballoy/axios-fp-io-ts/releases/tag/v1.0.0
+[v2.0.0]: https://github.com/xballoy/axios-fp-io-ts/releases/tag/v2.0.0
