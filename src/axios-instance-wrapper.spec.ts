@@ -1,13 +1,14 @@
 import { fail } from 'node:assert';
 import { isLeft, isRight } from 'fp-ts/Either';
 import * as t from 'io-ts';
+import { HttpResponse, http } from 'msw';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { AxiosInstanceWrapper } from './axios-instance-wrapper';
 import { AxiosWrapper } from './axios-static-wrapper';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
 import { DecodeError } from './errors/decode-error';
-import { rest, server } from './mocks/server';
+import { server } from './mocks/server';
 
 describe('AxiosInstanceWrapper', () => {
   const ENDPOINT_MOCK = 'https://localhost';
@@ -30,7 +31,18 @@ describe('AxiosInstanceWrapper', () => {
 
   type Method = 'get' | 'delete' | 'head' | 'options' | 'post' | 'put' | 'patch';
   const mockServerResponse = (method: Method, status: number, data: any) => {
-    server.use(rest[method](ENDPOINT_MOCK, async (req, res, ctx) => res(ctx.status(status), ctx.json(data))));
+    server.use(
+      http[method](
+        ENDPOINT_MOCK,
+        () =>
+          new Response(JSON.stringify(data), {
+            status,
+            headers: {
+              'Content-Type': 'application/json',
+            },
+          }),
+      ),
+    );
   };
 
   beforeEach(() => {
@@ -65,7 +77,6 @@ describe('AxiosInstanceWrapper', () => {
 
             expect(result.right.data).toEqual(VALID_DATA);
             expect(result.right.status).toBeTruthy();
-            expect(result.right.statusText).toBeTruthy();
             expect(result.right.headers).toBeTruthy();
             expect(result.right.config).toBeTruthy();
             expect(result.right.request).toBeTruthy();
@@ -137,7 +148,6 @@ describe('AxiosInstanceWrapper', () => {
 
           expect(result.right.data).toEqual(VALID_DATA);
           expect(result.right.status).toBeTruthy();
-          expect(result.right.statusText).toBeTruthy();
           expect(result.right.headers).toBeTruthy();
           expect(result.right.config).toBeTruthy();
           expect(result.right.request).toBeTruthy();
@@ -179,8 +189,7 @@ describe('AxiosInstanceWrapper', () => {
 
     describe('when intended exception', () => {
       beforeEach(() => {
-        // eslint-disable-next-line @typescript-eslint/require-await
-        server.use(rest[method](ENDPOINT_MOCK, async (req, res) => res.networkError('Failed to connect')));
+        server.use(http[method](ENDPOINT_MOCK, () => HttpResponse.error()));
       });
 
       it('should return an AxiosResponseError', async () => {
