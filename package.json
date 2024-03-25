@@ -59,8 +59,8 @@
   },
   "devDependencies": {
     "@swc/core": "1.4.8",
-    "@tsconfig/node18": "18.2.2",
-    "@types/node": "20.11.28",
+    "@tsconfig/node18": "18.2.3",
+    "@types/node": "20.11.30",
     "@typescript-eslint/eslint-plugin": "7.2.0",
     "@typescript-eslint/parser": "7.2.0",
     "eslint": "8.57.0",
@@ -71,9 +71,9 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "microbundle": "0.15.1",
-    "msw": "2.2.7",
+    "msw": "2.2.10",
     "prettier": "3.2.5",
-    "typescript": "5.4.2",
+    "typescript": "5.4.3",
     "vitest": "1.4.0"
   },
   "peerDependencies": {
