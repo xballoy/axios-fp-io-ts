@@ -58,9 +58,9 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@swc/core": "1.4.8",
-    "@tsconfig/node18": "18.2.3",
-    "@types/node": "20.11.30",
+    "@swc/core": "1.4.11",
+    "@tsconfig/node18": "18.2.4",
+    "@types/node": "20.12.2",
     "@typescript-eslint/eslint-plugin": "7.3.1",
     "@typescript-eslint/parser": "7.3.1",
     "eslint": "8.57.0",
@@ -71,7 +71,7 @@
     "husky": "9.0.11",
     "lint-staged": "15.2.2",
     "microbundle": "0.15.1",
-    "msw": "2.2.10",
+    "msw": "2.2.13",
     "prettier": "3.2.5",
     "typescript": "5.4.3",
     "vitest": "1.4.0"
