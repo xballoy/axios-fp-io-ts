@@ -58,9 +58,9 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@swc/core": "1.4.11",
+    "@swc/core": "1.4.12",
     "@tsconfig/node18": "18.2.4",
-    "@types/node": "20.12.2",
+    "@types/node": "20.12.5",
     "@typescript-eslint/eslint-plugin": "7.4.0",
     "@typescript-eslint/parser": "7.4.0",
     "eslint": "8.57.0",
@@ -73,7 +73,7 @@
     "microbundle": "0.15.1",
     "msw": "2.2.13",
     "prettier": "3.2.5",
-    "typescript": "5.4.3",
+    "typescript": "5.4.4",
     "vitest": "1.4.0"
   },
   "peerDependencies": {
