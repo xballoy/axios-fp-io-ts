@@ -58,7 +58,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@swc/core": "1.4.12",
+    "@swc/core": "1.4.13",
     "@tsconfig/node18": "18.2.4",
     "@types/node": "20.12.5",
     "@typescript-eslint/eslint-plugin": "7.4.0",
