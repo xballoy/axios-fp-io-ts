@@ -1,23 +1,18 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base", "group:all", "schedule:weekly", ":disablePeerDependencies"],
+  "extends": [
+    "config:best-practices",
+    ":disablePeerDependencies",
+    ":enableVulnerabilityAlertsWithLabel(security)",
+    ":maintainLockFilesWeekly"
+  ],
+  "labels": ["dependencies"],
   "commitMessagePrefix": "build(deps):",
-  "automerge": true,
-  "lockFileMaintenance": {
-    "enabled": true
-  },
   "packageRules": [
     {
-      "matchPackagePatterns": ["eslint"],
-      "groupName": "ESLint packages"
-    },
-    {
-      "matchPackagePatterns": ["jest"],
-      "groupName": "Jest packages"
-    },
-    {
-      "matchPackagePatterns": ["rollup", "esbuild"],
-      "groupName": "Rollup packages"
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0/",
+      "automerge": true
     }
   ]
 }
