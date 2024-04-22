@@ -4,15 +4,9 @@
     "config:best-practices",
     ":disablePeerDependencies",
     ":enableVulnerabilityAlertsWithLabel(security)",
-    ":maintainLockFilesWeekly"
+    ":maintainLockFilesWeekly",
+    ":automergeMinor"
   ],
   "labels": ["dependencies"],
-  "commitMessagePrefix": "build(deps):",
-  "packageRules": [
-    {
-      "matchUpdateTypes": ["minor", "patch"],
-      "matchCurrentVersion": "!/^0/",
-      "automerge": true
-    }
-  ]
+  "commitMessagePrefix": "build(deps):"
 }
