@@ -73,7 +73,6 @@
     "io-ts": "^2.2.10"
   },
   "lint-staged": {
-    "*.ts": "biome lint --apply",
-    "*.{ts,md,yml,json}": "biome format --write"
+    "*": ["biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched"]
   }
 }
