@@ -47,7 +47,7 @@
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
   "files": ["lib"],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "lefthook install",
     "build": "microbundle",
     "format:check": "biome format src",
     "format:fix": "biome format --write src",
@@ -60,8 +60,7 @@
     "@swc/core": "1.5.7",
     "@tsconfig/node20": "20.1.4",
     "@types/node": "20.12.12",
-    "husky": "9.0.11",
-    "lint-staged": "15.2.5",
+    "lefthook": "1.6.13",
     "microbundle": "0.15.1",
     "msw": "2.3.0",
     "typescript": "5.4.5",
@@ -71,8 +70,5 @@
     "axios": "~0.28.0",
     "fp-ts": "^2.8.0",
     "io-ts": "^2.2.10"
-  },
-  "lint-staged": {
-    "*": ["biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched"]
   }
 }
