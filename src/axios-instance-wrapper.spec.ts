@@ -1,9 +1,9 @@
 import { fail } from 'node:assert';
 import { isLeft, isRight } from 'fp-ts/Either';
 import * as t from 'io-ts';
-import { HttpResponse, http } from 'msw';
+import { http, HttpResponse } from 'msw';
 import { beforeEach, describe, expect, it } from 'vitest';
-import { AxiosInstanceWrapper } from './axios-instance-wrapper';
+import type { AxiosInstanceWrapper } from './axios-instance-wrapper';
 import { AxiosWrapper } from './axios-static-wrapper';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
@@ -30,7 +30,7 @@ describe('AxiosInstanceWrapper', () => {
   let cut: AxiosInstanceWrapper;
 
   type Method = 'get' | 'delete' | 'head' | 'options' | 'post' | 'put' | 'patch';
-  const mockServerResponse = (method: Method, status: number, data: any) => {
+  const mockServerResponse = (method: Method, status: number, data: unknown) => {
     server.use(
       http[method](
         ENDPOINT_MOCK,

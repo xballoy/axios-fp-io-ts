@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig } from 'axios';
+import axios, { type AxiosRequestConfig } from 'axios';
 import { AxiosInstanceWrapper } from './axios-instance-wrapper';
 
 class AxiosStaticWrapper extends AxiosInstanceWrapper {

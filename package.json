@@ -45,34 +45,24 @@
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
-    "prepare": "husky install",
+    "prepare": "lefthook install",
     "build": "microbundle",
-    "format:check": "prettier --check src",
-    "format:fix": "prettier --write src",
-    "lint:check": "eslint src --cache",
-    "lint:fix": "eslint src --cache --fix",
+    "format:check": "biome format src",
+    "format:fix": "biome format --write src",
+    "lint:check": "biome lint src",
+    "lint:fix": "biome lint --apply src",
     "test": "vitest run"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.3",
     "@swc/core": "1.5.7",
-    "@tsconfig/node18": "18.2.4",
+    "@tsconfig/node20": "20.1.4",
     "@types/node": "20.12.12",
-    "@typescript-eslint/eslint-plugin": "7.11.0",
-    "@typescript-eslint/parser": "7.11.0",
-    "eslint": "8.57.0",
-    "eslint-config-airbnb-base": "15.0.0",
-    "eslint-config-airbnb-typescript": "18.0.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-import": "2.29.1",
-    "husky": "9.0.11",
-    "lint-staged": "15.2.5",
+    "lefthook": "1.6.13",
     "microbundle": "0.15.1",
     "msw": "2.3.0",
-    "prettier": "3.2.5",
     "typescript": "5.4.5",
     "vitest": "1.6.0"
   },
@@ -80,9 +70,5 @@
     "axios": "~0.28.0",
     "fp-ts": "^2.8.0",
     "io-ts": "^2.2.10"
-  },
-  "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "*.{ts,md,yml,json}": "prettier --write"
   }
 }

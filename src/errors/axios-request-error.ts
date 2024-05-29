@@ -7,4 +7,4 @@ export class AxiosRequestError extends Error {
   }
 }
 
-export const isAxiosRequestError = (error: any): error is AxiosRequestError => error instanceof AxiosRequestError;
+export const isAxiosRequestError = (error: unknown): error is AxiosRequestError => error instanceof AxiosRequestError;

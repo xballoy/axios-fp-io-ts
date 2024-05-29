@@ -1,6 +1,6 @@
-import { AxiosResponse } from 'axios';
+import type { AxiosResponse } from 'axios';
 import { isRight, left, right } from 'fp-ts/Either';
-import { Type } from 'io-ts';
+import type { Type } from 'io-ts';
 import { PathReporter } from 'io-ts/PathReporter';
 import { DecodeError } from './errors/decode-error';
 
