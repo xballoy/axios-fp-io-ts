@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios, { type AxiosError } from 'axios';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
 

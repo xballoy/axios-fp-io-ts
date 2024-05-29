@@ -1,4 +1,4 @@
-import { AxiosResponseHeaders } from 'axios';
+import type { AxiosResponseHeaders } from 'axios';
 
 export class AxiosResponseError extends Error {
   constructor(
@@ -11,4 +11,5 @@ export class AxiosResponseError extends Error {
   }
 }
 
-export const isAxiosResponseError = (error: any): error is AxiosResponseError => error instanceof AxiosResponseError;
+export const isAxiosResponseError = (error: unknown): error is AxiosResponseError =>
+  error instanceof AxiosResponseError;

@@ -8,4 +8,4 @@ export class DecodeError extends Error {
   }
 }
 
-export const isDecodeError = (error: any): error is DecodeError => error instanceof DecodeError;
+export const isDecodeError = (error: unknown): error is DecodeError => error instanceof DecodeError;

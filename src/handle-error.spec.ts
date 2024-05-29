@@ -1,4 +1,4 @@
-import { AxiosResponse } from 'axios';
+import type { AxiosResponse } from 'axios';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
@@ -8,7 +8,7 @@ describe('handleError', () => {
   let error: unknown;
 
   describe('when error is an AxiosError', () => {
-    const getAxiosError = (message: string, response?: AxiosResponse, request?: any) => ({
+    const getAxiosError = (message: string, response?: AxiosResponse, request?: unknown) => ({
       isAxiosError: true,
       message,
       response,
