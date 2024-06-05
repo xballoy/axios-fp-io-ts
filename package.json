@@ -59,7 +59,7 @@
     "@biomejs/biome": "1.8.0",
     "@swc/core": "1.5.25",
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "20.14.1",
+    "@types/node": "20.14.2",
     "lefthook": "1.6.15",
     "microbundle": "0.15.1",
     "msw": "2.3.1",
