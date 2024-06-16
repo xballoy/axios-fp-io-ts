@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.8.1",
-    "@swc/core": "1.6.0",
+    "@swc/core": "1.6.1",
     "@tsconfig/node20": "20.1.4",
     "@types/node": "20.14.2",
     "lefthook": "1.6.16",
