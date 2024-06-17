@@ -5,7 +5,8 @@
     ":disablePeerDependencies",
     ":enableVulnerabilityAlertsWithLabel(security)",
     ":maintainLockFilesWeekly",
-    ":automergeMinor"
+    ":automergeMinor",
+    "customManagers:biomeVersions"
   ],
   "labels": ["dependencies"],
   "commitMessagePrefix": "build(deps):"
