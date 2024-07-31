@@ -63,7 +63,7 @@
     "microbundle": "0.15.1",
     "msw": "2.3.4",
     "typescript": "5.5.4",
-    "vitest": "2.0.4"
+    "vitest": "2.0.5"
   },
   "peerDependencies": {
     "axios": "~0.28.0",
