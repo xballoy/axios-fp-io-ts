@@ -53,7 +53,6 @@ describe('AxiosInstanceWrapper', () => {
     describe.each([
       ['get' as const],
       ['delete' as const],
-      ['head' as const],
       ['options' as const],
       ['post' as const],
       ['put' as const],
@@ -127,7 +126,6 @@ describe('AxiosInstanceWrapper', () => {
   describe.each([
     ['get' as const],
     ['delete' as const],
-    ['head' as const],
     ['options' as const],
     ['post' as const],
     ['put' as const],

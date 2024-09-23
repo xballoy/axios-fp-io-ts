@@ -8,10 +8,12 @@ import type { AxiosResponseError } from './errors/axios-response-error';
 import type { DecodeError } from './errors/decode-error';
 import { handleError } from './handle-error';
 
+type AxiosResponseDataType = AxiosResponse['data'];
+type AxiosRequestDataType = AxiosRequestConfig['data'];
+
 export type AxiosWrapperError = AxiosResponseError | AxiosRequestError | Error | DecodeError;
 
-// biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-const executeRequestAndValidateData = <T = any, D = any>(
+const executeRequestAndValidateData = <T = AxiosResponseDataType, D = AxiosRequestDataType>(
   codec: Type<T>,
   fn: () => Promise<AxiosResponse<T, D>>,
 ): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
@@ -27,50 +29,42 @@ const executeRequestAndValidateData = <T = any, D = any>(
 export class AxiosInstanceWrapper {
   constructor(private readonly instance: AxiosInstance) {}
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  request<T = any, D = any>(codec: Type<T>) {
+  request<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (config: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.request(config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  get<T = any, D = any>(codec: Type<T>) {
+  get<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.get(url, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  delete<T = any, D = any>(codec: Type<T>) {
+  delete<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.delete(url, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  head<T = any, D = any>(codec: Type<T>) {
+  head<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.head(url, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  options<T = any, D = any>(codec: Type<T>) {
+  options<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.options(url, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  post<T = any, D = any>(codec: Type<T>) {
+  post<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, data?: D, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.post(url, data, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  put<T = any, D = any>(codec: Type<T>) {
+  put<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, data?: D, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.put(url, data, config));
   }
 
-  // biome-ignore lint/suspicious/noExplicitAny: matches Axios typings
-  patch<T = any, D = any>(codec: Type<T>) {
+  patch<T = AxiosResponseDataType, D = AxiosRequestDataType>(codec: Type<T>) {
     return (url: string, data?: D, config?: AxiosRequestConfig<D>): TaskEither<AxiosWrapperError, AxiosResponse<T>> =>
       executeRequestAndValidateData<T, D>(codec, () => this.instance.patch(url, data, config));
   }

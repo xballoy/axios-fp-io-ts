@@ -7,7 +7,6 @@ class AxiosStaticWrapper extends AxiosInstanceWrapper {
   }
 
   // Keep the same API as axios
-  // eslint-disable-next-line class-methods-use-this
   create(config?: AxiosRequestConfig): AxiosInstanceWrapper {
     return new AxiosInstanceWrapper(axios.create(config));
   }
