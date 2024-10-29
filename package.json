@@ -59,7 +59,7 @@
     "@swc/core": "1.7.40",
     "@tsconfig/node20": "20.1.4",
     "@types/node": "20.17.2",
-    "lefthook": "1.8.1",
+    "lefthook": "1.8.2",
     "microbundle": "0.15.1",
     "msw": "2.5.2",
     "typescript": "5.6.3",
