@@ -1,6 +1,6 @@
 {
   "name": "axios-fp-io-ts",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "A wrapper around axios which uses io-ts to validate the received response.",
   "type": "module",
   "source": "src/index.ts",
@@ -45,7 +45,9 @@
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "microbundle",
     "format:check": "biome format src",
