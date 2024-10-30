@@ -47,6 +47,12 @@ jobs:
           git config user.email '686305+xballoy@users.noreply.github.com'
           npm version ${{ github.event.inputs.version }}
 
+      - name: Push
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git push
+          git push --tags
+
       - name: Build
         run: npm run build
 
@@ -54,9 +60,3 @@ jobs:
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-
-      - name: Push
-        run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-          git push
-          git push --tags
