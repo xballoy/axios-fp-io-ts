@@ -18,6 +18,8 @@ jobs:
     name: Release
 
     runs-on: ubuntu-24.04
+    permissions:
+      id-token: write
 
     steps:
       - name: Checkout
@@ -48,7 +50,7 @@ jobs:
         run: npm run build
 
       - name: Publish
-        run: npm publish
+        run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
