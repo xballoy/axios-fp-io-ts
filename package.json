@@ -64,7 +64,7 @@
     "lefthook": "1.8.4",
     "microbundle": "0.15.1",
     "msw": "2.6.6",
-    "typescript": "5.6.3",
+    "typescript": "5.7.2",
     "vitest": "2.1.5"
   },
   "peerDependencies": {
