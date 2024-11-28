@@ -60,7 +60,7 @@
     "@biomejs/biome": "1.9.4",
     "@swc/core": "1.9.3",
     "@tsconfig/node20": "20.1.4",
-    "@types/node": "22.10.0",
+    "@types/node": "22.10.1",
     "lefthook": "1.8.4",
     "microbundle": "0.15.1",
     "msw": "2.6.6",
