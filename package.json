@@ -63,7 +63,7 @@
     "@types/node": "22.10.1",
     "lefthook": "1.8.5",
     "microbundle": "0.15.1",
-    "msw": "2.6.6",
+    "msw": "2.6.7",
     "typescript": "5.7.2",
     "vitest": "2.1.8"
   },
