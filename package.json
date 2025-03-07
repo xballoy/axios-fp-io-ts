@@ -45,9 +45,7 @@
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
-  "files": [
-    "lib"
-  ],
+  "files": ["lib"],
   "scripts": {
     "build": "microbundle",
     "format:check": "biome format src",
@@ -68,7 +66,7 @@
     "vitest": "3.0.8"
   },
   "peerDependencies": {
-    "axios": "~0.28.0",
+    "axios": "~1.8.2",
     "fp-ts": "^2.8.0",
     "io-ts": "^2.2.10"
   }
