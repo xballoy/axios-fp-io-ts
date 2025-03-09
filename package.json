@@ -37,9 +37,7 @@
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
-  "files": [
-    "lib"
-  ],
+  "files": ["dist"],
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs,iife --dts",
     "format:check": "biome format src",
