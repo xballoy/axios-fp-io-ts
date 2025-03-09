@@ -3,15 +3,16 @@
   "version": "3.0.1",
   "description": "A wrapper around axios which uses io-ts to validate the received response.",
   "type": "module",
-  "types": "./dist/index.d.ts",
-  "browser": "./dist/index.iife.js",
-  "module": "./dist/index.js",
   "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": {
+    "import": {
       "types": "./dist/index.d.ts",
-      "browser": "./dist/index.iife.js",
-      "import": "./dist/index.js",
+      "import": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.cts",
       "require": "./dist/index.cjs"
     }
   },
@@ -37,11 +38,9 @@
     "url": "https://github.com/xballoy/axios-fp-io-ts/issues"
   },
   "homepage": "https://github.com/xballoy/axios-fp-io-ts#readme",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
-    "build": "tsup src/index.ts --format esm,cjs,iife --dts",
+    "build": "tsup src/index.ts --format esm,cjs --dts",
     "format:check": "biome format src",
     "format:fix": "biome format --write src",
     "lint:check": "biome lint src",
