@@ -1,11 +1,11 @@
-import type { AxiosResponseHeaders } from 'axios';
+import type { AxiosResponse } from 'axios';
 
 export class AxiosResponseError extends Error {
   constructor(
     message: string,
     public readonly data: unknown,
     public readonly status: number,
-    public readonly headers: AxiosResponseHeaders,
+    public readonly headers: AxiosResponse['headers'],
   ) {
     super(message);
   }

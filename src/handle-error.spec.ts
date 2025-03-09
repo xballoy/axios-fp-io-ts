@@ -1,4 +1,4 @@
-import type { AxiosResponse } from 'axios';
+import { AxiosHeaders, type AxiosResponse } from 'axios';
 import { beforeEach, describe, expect, it } from 'vitest';
 import { AxiosRequestError } from './errors/axios-request-error';
 import { AxiosResponseError } from './errors/axios-response-error';
@@ -22,6 +22,7 @@ describe('handleError', () => {
       status: 500,
       statusText: 'OK',
       config: {
+        headers: AxiosHeaders.from(),
         url: 'http://localhost',
       },
       headers: {
