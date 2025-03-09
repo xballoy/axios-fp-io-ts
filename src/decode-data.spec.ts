@@ -1,5 +1,5 @@
 import { fail } from 'node:assert';
-import type { AxiosResponse } from 'axios';
+import { AxiosHeaders, type AxiosResponse } from 'axios';
 import { isLeft, isRight } from 'fp-ts/Either';
 import * as t from 'io-ts';
 import { beforeEach, describe, expect, it } from 'vitest';
@@ -16,12 +16,14 @@ describe('decodeData', () => {
   );
   let axiosResponse: AxiosResponse;
 
-  const getAxiosResponse = (data: unknown) => ({
+  const getAxiosResponse = (data: unknown): AxiosResponse => ({
     data,
     status: 200,
     statusText: 'OK',
     headers: {},
-    config: {},
+    config: {
+      headers: AxiosHeaders.from(),
+    },
   });
 
   describe('when data matches the codec', () => {
