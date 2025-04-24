@@ -1,13 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:best-practices",
-    ":disablePeerDependencies",
-    ":enableVulnerabilityAlertsWithLabel(security)",
-    ":maintainLockFilesWeekly",
-    ":automergeMinor",
-    "customManagers:biomeVersions"
-  ],
-  "labels": ["dependencies"],
-  "commitMessagePrefix": "build(deps):"
+  "extends": ["github>xballoy/renovate-config"]
 }
