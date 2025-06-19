@@ -54,7 +54,7 @@
     "@swc/core": "1.12.1",
     "@tsconfig/node20": "20.1.6",
     "@types/node": "22.15.32",
-    "lefthook": "1.11.13",
+    "lefthook": "1.11.14",
     "msw": "2.10.2",
     "tsup": "8.5.0",
     "typescript": "5.8.3",
