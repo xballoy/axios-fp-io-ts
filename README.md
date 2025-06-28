@@ -2,6 +2,8 @@
 
 [![Build](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/xballoy/axios-fp-io-ts/actions/workflows/build.yml) [![npm](https://img.shields.io/npm/v/axios-fp-io-ts)](https://www.npmjs.com/package/axios-fp-io-ts)
 
+> ⚠️ This package is deprecated. `fp-ts` officially [merged with Effect](https://dev.to/effect/a-bright-future-for-effect-455m) and it is recommanded to use Effect built-in capabilities instead of this package.
+
 A wrapper around `axios` which uses `io-ts` to validate the received response.
 
 ## Installation
